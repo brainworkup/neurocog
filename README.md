@@ -1,4 +1,4 @@
-# Neurocog Format
+# Neurocog Typst Format
 
 ## Installing
 

@@ -51,3 +51,5 @@ rsconnect/
 # Neurocog Repo
 .history/
 .vscode/
+
+/.quarto/
