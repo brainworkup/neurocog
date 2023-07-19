@@ -4,37 +4,15 @@ version: 1.0.0
 quarto-required: ">=1.4.0"
 contributes:
   format:
-    common:
-      filters:
-        - ams.lua
     typst:
       format-resources:
-        - _nse.qmd
-        - _behav_obs.qmd
-        - _recs.qmd
-        - _sirf.qmd
-        - _academics.qmd
-        - _academics_text.qmd
-        - _adhd.qmd
-        - _adhd_text.qmd
-        - _emotion.qmd
-        - _emotion_text.qmd
-        - _executive.qmd
-        - _executive_text.qmd
-        - _iq.qmd
-        - _iq_text.qmd
-        - _memory.qmd
-        - _memory_text.qmd
-        - _motor.qmd
-        - _motor_text.qmd
-        - _spatial.qmd
-        - _spatial_text.qmd
-        - _verbal.qmd
-        - _verbal_text.qmd
-        - refs.bib
-        - logo.png
+        - resources/qmd/*.qmd
+        - resources/images/*.png
+        - resources/bib/*.bib
       template:
         - template.typ
       template-partials:
         - typst-template.typ
         - typst-show.typ
+      filters:
+        - neurocog.lua
