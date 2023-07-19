@@ -286,6 +286,6 @@ tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 
 tbl_md
 
-list.files()
+# list.files()
 
 ```
