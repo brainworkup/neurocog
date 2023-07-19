@@ -6,10 +6,10 @@ contributes:
   format:
     typst:
       format-resources:
-        - _behav_obs.qmd
         - _nse.qmd
-        - _recs.qmd
+        - _behav_obs.qmd
         - _sirf.qmd
+        - _recs.qmd
         - _academics_text.qmd
         - _academics.qmd
         - _adhd_text.qmd

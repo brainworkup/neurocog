@@ -25,6 +25,10 @@ params:
   him_her: him
   him_her_cap: Him
   dx1: attention-deficit/hyperactivity disorder (ADHD)
+execute:
+  warning: false
+  echo: false
+  message: false
 ---
 
 ```{r}
@@ -33,13 +37,6 @@ Sys.setenv(PATIENT_FIRST_NAME = "Ashish")
 
 # Getting the value of the environment variable
 patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
-
-# Use the variable in your R script
-print(paste("Patient's first name is:", patient_first_name))
-
-# Later in the script...
-print(paste("We are still working with:", patient_first_name))
-
 ```
 
 ```{=typst}
@@ -78,8 +75,8 @@ print(paste("We are still working with:", patient_first_name))
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-patient <- patient_first_name
-data_path <- here::here(patient, "csv")
+patient <- "Biggie" # dont need
+data_path <- here::here("csv")
 files <- dir(data_path, pattern = "*.csv")
 neuropsych <-
   files |>
@@ -204,16 +201,16 @@ validity <-
 
 ```{r}
 #| label: write-neuro-data
-readr::write_csv(neuropsych, here::here(patient, "neuropsych.csv"))
-readr::write_csv(neurocog, here::here(patient, "neurocog.csv"))
-readr::write_csv(neurobehav, here::here(patient, "neurobehav.csv"))
-readr::write_csv(validity, here::here(patient, "validity.csv"))
+readr::write_csv(neuropsych, here::here("neuropsych.csv"))
+readr::write_csv(neurocog, here::here("neurocog.csv"))
+readr::write_csv(neurobehav, here::here("neurobehav.csv"))
+readr::write_csv(validity, here::here("validity.csv"))
 
 ## read
-neuropsych <- readr::read_csv(here::here(patient, "neuropsych.csv"))
-neurocog <- readr::read_csv(here::here(patient, "neurocog.csv"))
-neurobehav <- readr::read_csv(here::here(patient, "neurobehav.csv"))
-validity <- readr::read_csv(here::here(patient, "validity.csv"))
+neuropsych <- readr::read_csv(here::here("neuropsych.csv"))
+neurocog <- readr::read_csv(here::here("neurocog.csv"))
+neurobehav <- readr::read_csv(here::here("neurobehav.csv"))
+validity <- readr::read_csv(here::here("validity.csv"))
 ```
 
 ## Behavioral Observations
@@ -228,9 +225,9 @@ validity <- readr::read_csv(here::here(patient, "validity.csv"))
 
 ## Academic Skills
 
-{{< include _academics_text.qmd >}}
+<!-- {{< include _academics_text.qmd >}}
 
-{{< include _academics.qmd >}}
+{{< include _academics.qmd >}} -->
 
 ## Verbal/Language
 

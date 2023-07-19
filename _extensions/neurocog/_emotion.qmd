@@ -129,6 +129,8 @@ data_text |>
   )
 ```
 
+{{< include _emotion_text_raw.qmd >}}
+
 ```{r}
 #| label: qtbl-emotion
 #| eval: false
@@ -142,8 +144,8 @@ xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.")
 
 # four subtables
-tbl1 <-
-  dplyr::filter(data, domain == "Psychiatric Disorders") |>
+tbl1 <- 
+  dplyr::filter(data, domain == "Psychiatric Disorders") |> 
   dplyr::arrange(test_name) |>
   dplyr::arrange(subdomain)
 tbl1 <- tbl1[, c(11, 2, 4, 5, 6)]
@@ -155,8 +157,8 @@ table_psych <- bwu::tbl_gt(
 )
 table_psych
 
-tbl2 <-
-  dplyr::filter(data, domain == "Personality Disorders") |>
+tbl2 <- 
+  dplyr::filter(data, domain == "Personality Disorders") |> 
   dplyr::arrange(test_name) |>
   dplyr::arrange(subdomain)
 tbl2 <- tbl2[, c(11, 2, 4, 5, 6)]
@@ -168,57 +170,45 @@ table_personality <- bwu::tbl_gt(
 )
 table_personality
 
-tbl3 <-
-  dplyr::filter(data, domain == "Substance Use") |>
+tbl3 <- 
+  dplyr::filter(data, domain == "Substance Use") |> 
   dplyr::arrange(test_name) |>
   dplyr::arrange(subdomain)
 tbl3 <- tbl3[, c(11, 2, 4, 5, 6)]
 colnames(tbl3)[1] <- "test_name"
-table_sud <- bwu::tbl_gt(
-  tbl3,
-  table_name = "table_sud",
-  source_note = source_note
-)
-table_sud
 
-tbl4 <-
-  dplyr::filter(data, domain == "Psychosocial Problems") |>
+tbl4 <- 
+  dplyr::filter(data, domain == "Psychosocial Problems") |> 
   dplyr::arrange(test_name) |>
   dplyr::arrange(subdomain)
 tbl4 <- tbl4[, c(11, 2, 4, 5, 6)]
 colnames(tbl4)[1] <- "test_name"
-table_social <- bwu::tbl_gt(
-  tbl4,
-  table_name = "table_social",
-  source_note = source_note
-)
-table_social
 
 # merge
-data_core <- rbind(tbl1, tbl2, tbl3)
-# data_pai <- rbind(tbl1, tbl2, tbl3, tbl4)
+data_core <- rbind(tbl1, tbl2)
+# data <- rbind(tbl1, tbl2, tbl3, tbl4)
 
 # # subset data
-# data_qtbl <- data_pai[, c(11, 2, 4, 5, 6)]
+# data_qtbl <- data[, c(11, 2, 4, 5, 6)]
 # # hack
-colnames(data_core)[1] <- "test_name"
+# colnames(data_qtbl)[1] <- "test_name"
 
 # # run fc
-table_emotion <- bwu::tbl_gt(
-  data_core,
-  table_name = "table_emotion",
-  source_note = source_note
-)
-table_emotion
+# table_emotion <- bwu::tbl_gt(
+#   data_core,
+#   table_name = "table_emotion",
+#   source_note = source_note
+# )
+# table_emotion
 
 # save
-gt::gtsave(table_emotion, glue("table_emotion", ".png"), expand = 10)
-
+gt::gtsave(table_psych, glue("table_psych", ".png"), expand = 10)
+# gt::gtsave(table_emotion, glue("table_personality", ".png"), expand = 10)
 ```
 
 ```{=typst}
 <qtbl-emotion>
-#figure([#image("table_emotion.png", width: 50%)],
+#figure([#image("table_psych.png", width: 50%)],
   caption: [
     Behavioral, Personality, and Emotional Functioning
   ],
@@ -236,7 +226,7 @@ xfun::pkg_attach(c(
 ))
 
 # data for dotplot
-# data <- dplyr::filter(data, !is.na(percentile))
+data <- dplyr::filter(data, !is.na(percentile))
 
 fig_emotion <- bwu::dotplot(
   data = data,
