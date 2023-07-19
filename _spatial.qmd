@@ -103,7 +103,6 @@ data_text |>
   )
 ```
 
-
 ```{r}
 #| label: qtbl-spatial
 #| fig-align: center
@@ -149,10 +148,9 @@ gt::gtsave(table_spatial, glue("table_spatial", ".pdf"), expand = 10)
   supplement: [Table],
 )
 ```
-
 ```{r}
 #| label: fig-spatial
-#| eval: false
+#| eval: true
 #| fig-width: 6.5
 #| fig-height: 3.5
 #| fig-cap: "*Visuoperception, visuoconstruction, and visuospatial processing* refer to abilities such as mentally visualizing how objects should look from different angles, visualizing how to put objects together so that they fit correctly, and being able to accurately and efficiently copy and/or reproduce visual-spatial information onto paper."

@@ -1,7 +1,5 @@
 ---
 title: NEUROCOGNITIVE EXAMINATION
-author: Joey Trampush
-date: last-modified
 format:
   neurocog-typst: default
 params:
@@ -37,7 +35,7 @@ execute:
 Sys.setenv(PATIENT_FIRST_NAME = "Biggie")
 
 # Getting the value of the environment variable
-patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
+patient <- Sys.getenv("PATIENT_FIRST_NAME")
 ```
 
 ```{=typst}
@@ -48,7 +46,6 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 # TESTS ADMINISTERED
 
 ```{=typst}
-#set list(marker: ([•], [--]))
 - Comprehensive Neuropsychiatric Symptom and History Interview
 - Conners' Adult ADHD Diagnostic Interview for DSM-IV (CAADID), Part I: History
 - Conners' Adult ADHD Rating Scales--Self-Report: Long Version (CAARS--S:L)
@@ -76,9 +73,10 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-# patient <- "Biggie" # dont need
+# patient <- "" # dont need
 data_path <- here::here("csv")
 files <- dir(data_path, pattern = "*.csv")
+
 neuropsych <-
   files |>
   purrr::set_names() |>
@@ -96,6 +94,10 @@ neuropsych <-
   dplyr::mutate(pass = forcats::as_factor(pass)) |>
   dplyr::mutate(verbal = forcats::as_factor(verbal)) |>
   dplyr::mutate(timed = forcats::as_factor(timed))
+
+test_df <- readr::read_csv(file.path(data_path, files[1]), show_col_types = FALSE)
+print(colnames(test_df))
+
 ```
 
 ```{r}
@@ -208,10 +210,10 @@ readr::write_csv(neurobehav, here::here("neurobehav.csv"))
 readr::write_csv(validity, here::here("validity.csv"))
 
 ## read
-# neuropsych <- readr::read_csv(here::here("neuropsych.csv"))
-# neurocog <- readr::read_csv(here::here("neurocog.csv"))
-# neurobehav <- readr::read_csv(here::here("neurobehav.csv"))
-# validity <- readr::read_csv(here::here("validity.csv"))
+neuropsych <- readr::read_csv(here::here("neuropsych.csv"))
+neurocog <- readr::read_csv(here::here("neurocog.csv"))
+neurobehav <- readr::read_csv(here::here("neurobehav.csv"))
+validity <- readr::read_csv(here::here("validity.csv"))
 ```
 
 ## Behavioral Observations
@@ -273,7 +275,7 @@ readr::write_csv(validity, here::here("validity.csv"))
 
 ```{r}
 #| label: fig-domain-plot
-#| eval: true
+#| eval: false
 #| column: page
 #| fig-cap-location: margin
 #| fig-cap: "*Note:* *z*-scores have a mean of 0 and a standard deviation of 1."
@@ -343,7 +345,7 @@ Sincerely,
 #| out-width: 20%
 #| fig-align: left
 #| cache: true
-#| eval: true
+#| eval: false
 knitr::include_graphics("jwt_sig.png")
 ```
 

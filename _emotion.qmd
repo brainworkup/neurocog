@@ -129,16 +129,18 @@ data_text |>
   )
 ```
 
-
 ```{r}
 #| label: qtbl-emotion
 #| eval: false
+#| out-height: 60%
+#| fig-height: 10
+
 # GT table
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering for tables
-# data <- dplyr::arrange(data, test_name)
-# TODO:
+data <- dplyr::arrange(data, test_name)
+
 # source note
 source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.")
 
@@ -213,19 +215,29 @@ table_emotion <- bwu::tbl_gt(
 table_emotion
 
 # save
-gt::gtsave(table_emotion, glue("table_emotion", ".png"), expand = 10)
+gt::gtsave(table_emotion, glue::glue("table_emotion", ".png"), expand = 10)
 ```
 
-```{=typst}
-<qtbl-emotion>
-#figure([#image("table_emotion.png", width: 70%)],
-  caption: [
-    Behavioral, Personality, and Emotional Functioning
-  ],
-  kind: "qtbl",
-  supplement: [Table],
-)
-```
+<!-- ```{=typst} -->
+
+<!-- <qtbl-emotion> -->
+
+<!-- #figure([#image("table_emotion.png", width: 70%)], -->
+
+<!--   caption: [ -->
+
+<!--     Behavioral, Personality, and Emotional Functioning -->
+
+<!--   ], -->
+
+<!--   kind: "qtbl", -->
+
+<!--   supplement: [Table], -->
+
+<!-- ) -->
+
+<!-- ``` -->
+
 ```{r}
 #| label: fig-emotion
 #| eval: true
@@ -273,4 +285,7 @@ markdown_table_typst <- function(data) {
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 
 tbl_md
+
+list.files()
+
 ```

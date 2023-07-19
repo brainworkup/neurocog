@@ -85,16 +85,16 @@
 )
 
   // Title row.
-  // align(center)[
-  //   #block(text(font: sans-font, weight: 700, 1.75em, title))
-  //   #v(2.2em, weak: true)
-  // ]
+  align(center)[
+    #block(text(font: sans-font, weight: 700, 1.75em, title))
+    #v(2.2em, weak: true)
+  ]
 
-  if title != none {
-    align(center)[#block(inset: 2em)[
-      #text(weight: "bold", size: 1.5em)[#title]
-    ]]
-  }
+  // if title != none {
+  //   align(center)[#block(inset: 2em)[
+  //     #text(weight: "bold", size: 1.5em)[#title]
+  //   ]]
+  // }
 
   if authors != none {
     let count = authors.len()

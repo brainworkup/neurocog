@@ -5,27 +5,35 @@ quarto-required: ">=1.4.0"
 contributes:
   format:
     typst:
-      format-resources:
-        - _nse.qmd
-        - _behav_obs.qmd
-        - _sirf.qmd
-        - _recs.qmd
-        - _academics_text.qmd
-        - _academics.qmd
-        - _adhd_text.qmd
-        - _adhd.qmd
-        - _emotion_text.qmd
-        - _emotion.qmd
-        - _executive_text.qmd
-        - _executive.qmd
-        - _iq_text.qmd
-        - _iq.qmd
-        - _memory_text.qmd
-        - _memory.qmd
-        - _spatial_text.qmd
-        - _spatial.qmd
-        - _verbal_text.qmd
-        - _verbal.qmd
       template-partials:
         - typst-template.typ
         - typst-show.typ
+      # format-resources:
+      #   - _nse.qmd
+      #   - _behav_obs.qmd
+      #   - _sirf.qmd
+      #   - _recs.qmd
+      #   - _academics_text.qmd
+      #   - _academics.qmd
+      #   - _academics_raw.qmd
+      #   - _adhd_text.qmd
+      #   - _adhd_raw.qmd
+      #   - _adhd.qmd
+      #   - _emotion_text.qmd
+      #   - _emotion_raw.qmd
+      #   - _emotion.qmd
+      #   - _executive_text.qmd
+      #   - _executive.qmd
+      #   - _executive_raw.qmd
+      #   - _iq_text.qmd
+      #   - _iq.qmd
+      #   - _iq_raw.qmd
+      #   - _memory_text.qmd
+      #   - _memory.qmd
+      #   - _memory_raw.qmd
+      #   - _spatial_text.qmd
+      #   - _spatial.qmd
+      #   - _spatial_raw.qmd
+      #   - _verbal_text.qmd
+      #   - _verbal.qmd
+      #   - _verbal_raw.qmd

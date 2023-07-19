@@ -170,3 +170,117 @@ execute:
 - CAARS-OR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Below Average 
 - CAARS-OR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was Below Average 
 - Ashish's observer-rated composite indicator for identifying individuals 'at-risk' for ADHD was Below Average
+ 
+- CAARS-SR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Exceptionally High 
+- CAARS-SR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Exceptionally High 
+- CAARS-SR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Exceptionally High 
+- Ashish's composite indicator for identifying individuals 'at-risk' for ADHD was Above Average 
+- CAARS-SR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was High Average 
+- CAARS-SR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Average 
+- CAARS-SR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-SR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Low Average 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Low Average 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Below Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Below Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Below Average 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Below Average 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Below Average 
+- Ashish's overall level of executive functioning was Below Average. 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Exceptionally Low 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Exceptionally Low
+ 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Exceptionally High 
+- Ashish's overall level of executive functioning was Exceptionally High. 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Exceptionally High 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Exceptionally High 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Exceptionally High 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Above Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Above Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Above Average 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Above Average 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Above Average 
+- CAARS-OR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-OR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Low Average 
+- CAARS-OR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Low Average 
+- CAARS-OR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- CAARS-OR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Below Average 
+- CAARS-OR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Below Average 
+- CAARS-OR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was Below Average 
+- Ashish's observer-rated composite indicator for identifying individuals 'at-risk' for ADHD was Below Average
+ 
+- CAARS-SR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Exceptionally High 
+- CAARS-SR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Exceptionally High 
+- CAARS-SR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Exceptionally High 
+- Ashish's composite indicator for identifying individuals 'at-risk' for ADHD was Above Average 
+- CAARS-SR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was High Average 
+- CAARS-SR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Average 
+- CAARS-SR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-SR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Low Average 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Low Average 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Below Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Below Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Below Average 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Below Average 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Below Average 
+- Ashish's overall level of executive functioning was Below Average. 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Exceptionally Low 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Exceptionally Low
+ 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Exceptionally High 
+- Ashish's overall level of executive functioning was Exceptionally High. 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Exceptionally High 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Exceptionally High 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Exceptionally High 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Above Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Above Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Above Average 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Above Average 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Above Average 
+- CAARS-OR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-OR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Low Average 
+- CAARS-OR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Low Average 
+- CAARS-OR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- CAARS-OR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Below Average 
+- CAARS-OR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Below Average 
+- CAARS-OR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was Below Average 
+- Ashish's observer-rated composite indicator for identifying individuals 'at-risk' for ADHD was Below Average
+ 
+- CAARS-SR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Exceptionally High 
+- CAARS-SR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Exceptionally High 
+- CAARS-SR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Exceptionally High 
+- Ashish's composite indicator for identifying individuals 'at-risk' for ADHD was Above Average 
+- CAARS-SR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was High Average 
+- CAARS-SR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Average 
+- CAARS-SR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-SR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Low Average 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Low Average 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Below Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Below Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Below Average 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Below Average 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Below Average 
+- Ashish's overall level of executive functioning was Below Average. 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Exceptionally Low 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Exceptionally Low
+ 
+- Emotion Regulation (i.e., control and manage emotions, including staying calm when handling small problems and reacting with the right level of emotion) was Exceptionally High 
+- Ashish's overall level of executive functioning was Exceptionally High. 
+- Attention (i.e., avoid distractions, concentrate on tasks, and sustain attention) was Exceptionally High 
+- Inhibitory Control (i.e., control behavior or impulses, including thinking about consequences before acting, maintaining self-control, and thinking before speaking) was Exceptionally High 
+- Self-Monitoring (i.e., evaluate own behavior in order to determine when a different approach is necessary, including noticing and fixing mistakes, knowing when help is required, and understanding when a task is completed) was Exceptionally High 
+- Working Memory (i.e., keep information in mind that is important for knowing what to do and how to do it, including remembering important things, instructions, and steps) was Above Average 
+- Organization (i.e., manage personal effects, work, or multiple tasks, including organizing tasks and thoughts well, managing time effectively, and working neatly) was Above Average 
+- Flexibility (i.e., adjust behavior to meet circumstances, including coming up with different ways to solve problems, changing behavior when needed, and being able to come up with new ways to reach a goal) was Above Average 
+- Initiation (i.e., begin tasks or projects on own, including starting tasks easily, being motivated, and taking the initiative when needed) was Above Average 
+- Planning (i.e., develop and implement strategies to accomplish tasks, including planning ahead and making good decisions) was Above Average 
+- CAARS-OR Hyperactivity/Restlessness (i.e., problems with working at the same task for long periods of time, feeling more restless than others seem to be, fidgeting) was Low Average 
+- CAARS-OR Impulsivity/Emotional Lability (i.e., engaging in more impulsive acts than others do, low frustration tolerance, quick and frequent mood changes, feeling easily angered and irritated by people) was Low Average 
+- CAARS-OR Problems with Self-Concept (i.e., poor social relationships, low self-esteem and self confidence) was Low Average 
+- CAARS-OR DSM-5 Hyperactive-Impulsive Symptoms (i.e., behave in a manner consistent with the DSM-5 Hyperactive-Impulsive Presentation of ADHD) was Low Average 
+- CAARS-OR Inattention/Memory Problems (i.e., trouble concentrating, difficulty planning or completing tasks, forgetfulness, absent-mindedness, being disorganized) was Below Average 
+- CAARS-OR DSM-5 Inattentive Symptoms (i.e., behave in a manner consistent with the DSM-5 Inattentive Presentation of ADHD) was Below Average 
+- CAARS-OR DSM-5 ADHD Symptoms Total (i.e., behave in a manner consistent with the DSM-5 diagnostic criteria for Combined Presentation of ADHD) was Below Average 
+- Ashish's observer-rated composite indicator for identifying individuals 'at-risk' for ADHD was Below Average
