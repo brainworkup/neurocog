@@ -16,3 +16,4 @@ contributes:
         - typst-show.typ
       filters:
         - neurocog.lua
+      cite-method: biblatex
