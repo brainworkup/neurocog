@@ -1,0 +1,15 @@
+title: Neurocog
+author: Joey Trampush
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      format-resources:
+        - logo.png
+        - plot_narrow.png
+        - _nse.qmd
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ

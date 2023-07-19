@@ -1,36 +1,38 @@
-title: Neurocog
+title: Neuropsych Report
 author: Joey Trampush
-version: 1.0.0
+version: 0.1.1
 quarto-required: ">=1.4.0"
 contributes:
   format:
     common:
-      - refs.bib
-      - logo.png
-    typst:
       format-resources:
-        - _nse.qmd
         - _behav_obs.qmd
+        - _nse.qmd
         - _recs.qmd
         - _sirf.qmd
-        - _academics.qmd
         - _academics_text.qmd
-        - _adhd.qmd
+        - _academics.qmd
         - _adhd_text.qmd
-        - _emotion.qmd
+        - _adhd.qmd
         - _emotion_text.qmd
-        - _executive.qmd
+        - _emotion.qmd
         - _executive_text.qmd
-        - _iq.qmd
+        - _executive.qmd
         - _iq_text.qmd
-        - _memory.qmd
+        - _iq.qmd
         - _memory_text.qmd
-        - _motor.qmd
+        - _memory.qmd
         - _motor_text.qmd
-        - _spatial.qmd
+        - _motor.qmd
         - _spatial_text.qmd
-        - _verbal.qmd
+        - _spatial.qmd
         - _verbal_text.qmd
+        - _verbal.qmd
+    typst:
+      template: template.typ
       template-partials:
         - typst-template.typ
         - typst-show.typ
+      filters:
+        - ams.lua
+      cite-method: biblatex # changed from natbib
