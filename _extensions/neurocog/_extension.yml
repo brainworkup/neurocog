@@ -5,8 +5,8 @@ quarto-required: ">=1.4.0"
 contributes:
   format:
     common:
-      - refs.bib
-      - logo.png
+      filters:
+        - ams.lua
     typst:
       format-resources:
         - _nse.qmd
@@ -31,6 +31,10 @@ contributes:
         - _spatial_text.qmd
         - _verbal.qmd
         - _verbal_text.qmd
+        - refs.bib
+        - logo.png
+      template:
+        - template.typ
       template-partials:
         - typst-template.typ
         - typst-show.typ
