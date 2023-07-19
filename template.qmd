@@ -25,11 +25,22 @@ params:
   him_her: him
   him_her_cap: Him
   dx1: attention-deficit/hyperactivity disorder (ADHD)
-resources:
-  - qmd
-  - images
-  - bib
 ---
+
+```{r}
+# Setting the environment variable
+Sys.setenv(PATIENT_FIRST_NAME = "Ashish")
+
+# Getting the value of the environment variable
+patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
+
+# Use the variable in your R script
+print(paste("Patient's first name is:", patient_first_name))
+
+# Later in the script...
+print(paste("We are still working with:", patient_first_name))
+
+```
 
 ```{=typst}
 #v(2pt, weak: true)
@@ -67,7 +78,7 @@ resources:
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-patient <- "Biggie"
+patient <- patient_first_name
 data_path <- here::here(patient, "csv")
 files <- dir(data_path, pattern = "*.csv")
 neuropsych <-
