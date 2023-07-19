@@ -14,3 +14,13 @@ execute:
 # <!-- <<START>> -->
 
 ```
+ Short-term word list recall was High Average. 
+Delayed recall of word list was High Average. 
+The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
+Delayed recall of the story details over time was Average. 
+Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
+Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
+Word list learning/encoding was Average. 
+Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
+Recognition of the target visual material among nontarget distractors after a delay period was Average. 
+Learning and recognition of visual material (abstract shapes) was Average.

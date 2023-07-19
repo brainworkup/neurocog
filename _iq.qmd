@@ -21,7 +21,7 @@ format:
 library(readr)
 library(dplyr)
 library(bwu)
-patient <- "~/runtime/Ashish"
+patient <- "~/neurocog"
 g <- bwu::gpluck_get_index_scores(patient = patient)
 ```
 

@@ -58,3 +58,15 @@ _quarto.yml
 
 /.luarc.json
 index.qmd
+csv/
+template_files/
+fig_*.pdf
+fig_*.png
+table_*.png
+table_*.pdf
+neuro*.csv
+jwt_sig.png
+*.xlsx
+*.csv
+_iq.qmd
+tbl_range.png

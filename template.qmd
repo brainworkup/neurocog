@@ -75,7 +75,7 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-# patient <- "Biggie" # dont need
+patient <- "Biggie" # dont need
 data_path <- here::here("csv")
 files <- dir(data_path, pattern = "*.csv")
 neuropsych <-
@@ -342,7 +342,7 @@ Sincerely,
 #| fig-align: left
 #| cache: true
 #| eval: false
-knitr::include_graphics("../jwt_sig.png")
+knitr::include_graphics("jwt_sig.png")
 ```
 
 **Joey W. Trampush, Ph.D.**\
@@ -380,7 +380,7 @@ treatment recommendations.
 #| cache: true
 #| double-escape: true
 #| escape: false
-range <- readr::read_csv("../test_score_ranges.csv")
+range <- readr::read_csv("test_score_ranges.csv")
 tbl_range <- gt::gt(range) |>
   gt::tab_header(title = "Test Score Labels/Ranges") |>
   gt::cols_align(align = "center") |>
