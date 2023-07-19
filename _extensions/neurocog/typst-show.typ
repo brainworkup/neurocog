@@ -1,4 +1,3 @@
-
 #show: doc => neurocog(
 $if(title)$
   title: [$title$],
