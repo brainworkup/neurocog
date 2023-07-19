@@ -147,7 +147,7 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_memory_text_raw.qmd",
+    file = "_memory_raw.qmd",
     fill = TRUE,
     append = TRUE
   )

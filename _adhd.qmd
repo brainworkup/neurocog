@@ -137,7 +137,7 @@ data_sr |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_sr$result,
-    file = "_adhd_text_raw.qmd",
+    file = "_adhd_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -158,7 +158,7 @@ data_or |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_or$result,
-    file = "_adhd_text_raw.qmd",
+    file = "_adhd_raw.qmd",
     fill = TRUE,
     append = TRUE
   )

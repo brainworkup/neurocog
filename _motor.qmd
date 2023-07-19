@@ -99,7 +99,7 @@ data <- dplyr::filter(data, scale %in% filter_file)
 #| cache: true
 xfun::pkg_attach(c("glue", "purrr", "dplyr", "epoxy"))
 
-# This code sorts the data by percentile and then removes duplicate rows based on the percentile variable. The resulting data is then converted to text and appended to the _academics_text_raw.qmd file.
+# This code sorts the data by percentile and then removes duplicate rows based on the percentile variable. The resulting data is then converted to text and appended to the _academics_raw.qmd file.
 data_text <-
   data |>
   dplyr::arrange(dplyr::desc(percentile)) |>
