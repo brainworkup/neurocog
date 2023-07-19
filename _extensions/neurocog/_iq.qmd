@@ -17,16 +17,17 @@ format:
 <!-- ### General Cognitive Ability -->
 
 ```{r}
-patient <- "Biggie"
+#| label: data-g
+library(readr)
+library(dplyr)
+library(bwu)
+patient <- "~/runtime/Ashish"
 g <- bwu::gpluck_get_index_scores(patient = patient)
 ```
 
 
 ```{r}
 #| label: data-iq
-library(readr)
-library(dplyr)
-library(bwu)
 
 # which csv file to use
 pheno <- "iq"
