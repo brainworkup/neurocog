@@ -218,7 +218,7 @@ gt::gtsave(table_emotion, glue("table_emotion", ".png"), expand = 10)
 
 ```{=typst}
 <qtbl-emotion>
-#figure([#image("table_psych.png", width: 50%)],
+#figure([#image("table_emotion.png", width: 70%)],
   caption: [
     Behavioral, Personality, and Emotional Functioning
   ],

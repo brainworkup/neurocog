@@ -164,6 +164,12 @@
 }
 #show: doc => neurocog(
   title: [NEUROCOGNITIVE EXAMINATION],
+  authors: (
+    ( name: [Joey Trampush],
+      affiliation: [],
+      email: [] ),
+    ),
+  date: [2023-07-19],
   cols: 1,
   doc,
 )
@@ -351,7 +357,7 @@ Ms. XXXX has worked full time as an administrator in a small company. She has m
 == Emotional/Behavioral/Personality
 <emotionalbehavioralpersonality>
 <qtbl-emotion>
-#figure([#image("table_psych.png", width: 50%)],
+#figure([#image("table_emotion.png", width: 70%)],
   caption: [
     Behavioral, Personality, and Emotional Functioning
   ],
@@ -630,6 +636,8 @@ It was a pleasure to work with Mr. Smalls. Please contact me with any questions
 
 Sincerely,
 
+#image("jwt_sig.png", width: 20%)
+
 #strong[Joey W. Trampush, Ph.D.] \
 Assistant Professor of Psychiatry \
 Department of Psychiatry and the Behavioral Sciences \
@@ -645,4 +653,6 @@ Neuropsychological tests are intrinsically performance-based, and cognitive perf
 
 == Conversion of Test Scores
 <conversion-of-test-scores>
-#image("tbl_range.png")
+
+
+
