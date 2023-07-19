@@ -67,7 +67,7 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 ```
 # NEUROBEHAVIORAL STATUS EXAM
 
-{{< include qmd/_nse.qmd >}}
+{{< include _nse.qmd >}}
 
 # NEUROCOGNITIVE FINDINGS
 
@@ -215,55 +215,55 @@ validity <- readr::read_csv(here::here("validity.csv"))
 
 ## Behavioral Observations
 
-{{< include qmd/_qmd/_behav_obs.qmd >}}
+{{< include _behav_obs.qmd >}}
 
 ## Intelligence/General Ability
 
-{{< include qmd/_iq_text.qmd >}}
+{{< include _iq_text.qmd >}}
 
-{{< include qmd/_iq.qmd >}}
+{{< include _iq.qmd >}}
 
 ## Academic Skills
 
-<!-- {{< include qmd/_academics_text.qmd >}}
+<!-- {{< include _academics_text.qmd >}}
 
-{{< include qmd/_academics.qmd >}} -->
+{{< include _academics.qmd >}} -->
 
 ## Verbal/Language
 
-{{< include qmd/_verbal_text.qmd >}}
+{{< include _verbal_text.qmd >}}
 
-{{< include qmd/_verbal.qmd >}}
+{{< include _verbal.qmd >}}
 
 ## Visual Perception/Construction
 
-{{< include qmd/_spatial_text.qmd >}}
+{{< include _spatial_text.qmd >}}
 
-{{< include qmd/_spatial.qmd >}}
+{{< include _spatial.qmd >}}
 
 ## Attention/Executive
 
-{{< include qmd/_executive_text.qmd >}}
+{{< include _executive_text.qmd >}}
 
-{{< include qmd/_executive.qmd >}}
+{{< include _executive.qmd >}}
 
 ## Memory
 
-{{< include qmd/_memory_text.qmd >}}
+{{< include _memory_text.qmd >}}
 
-{{< include qmd/_memory.qmd >}}
+{{< include _memory.qmd >}}
 
 ## ADHD/Executive Functioning
 
-{{< include qmd/_adhd_text.qmd >}}
+{{< include _adhd_text.qmd >}}
 
-{{< include qmd/_adhd.qmd >}}
+{{< include _adhd.qmd >}}
 
 ## Emotional/Behavioral/Personality
 
-{{< include qmd/_emotion_text.qmd >}}
+{{< include _emotion_text.qmd >}}
 
-{{< include qmd/_emotion.qmd >}}
+{{< include _emotion.qmd >}}
 
 {{< pagebreak >}}
 
@@ -325,11 +325,11 @@ ggplot2::ggsave("fig_g.png")
 ggplot2::ggsave("fig_g.pdf")
 ```
 
-{{< include qmd/_sirf.qmd >}}
+{{< include _sirf.qmd >}}
 
 # RECOMMENDATIONS
 
-{{< include qmd/_recs.qmd >}}
+{{< include _recs.qmd >}}
 
 It was a pleasure to work with Mr. Smalls. Please contact me with any questions
 or concerns regarding this patient.
