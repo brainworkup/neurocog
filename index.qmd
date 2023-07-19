@@ -1,8 +1,8 @@
 ---
 title: Template/Extension in Quarto + Typst
 format: html
-filters:
-  - shinylive
+# filters:
+#   - shinylive
 ---
 
 ## Quarto

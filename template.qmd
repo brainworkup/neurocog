@@ -26,7 +26,9 @@ params:
   him_her_cap: Him
   dx1: attention-deficit/hyperactivity disorder (ADHD)
 resources:
-  - csv/*.csv
+  - qmd
+  - images
+  - bib
 ---
 
 ```{=typst}
