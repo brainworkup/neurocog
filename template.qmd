@@ -67,7 +67,7 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 ```
 # NEUROBEHAVIORAL STATUS EXAM
 
-{{< include _nse.qmd >}}
+{{< include _extensions/neurocog/_nse.qmd >}}
 
 # NEUROCOGNITIVE FINDINGS
 
