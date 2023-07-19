@@ -25,7 +25,6 @@ params:
   him_her: him
   him_her_cap: Him
   dx1: attention-deficit/hyperactivity disorder (ADHD)
-
 ---
 
 ```{=typst}
@@ -33,7 +32,6 @@ params:
 *PATIENT NAME:* `r params$first_name` `r params$last_name`\
 *DATES OF EXAM:* `r params$doe1`, `r params$doe2`, `r params$doe3` \
 ```
-
 # TESTS ADMINISTERED
 
 ```{=typst}
@@ -55,7 +53,6 @@ params:
 - Trail Making Test
 - Personality Assessment Inventory (PAI)
 ```
-
 # NEUROBEHAVIORAL STATUS EXAM
 
 {{< include _nse.qmd >}}
@@ -319,8 +316,8 @@ ggplot2::ggsave("fig_g.pdf")
 
 {{< include _recs.qmd >}}
 
-It was a pleasure to work with Mr. Smalls. Please contact me with
-any questions or concerns regarding this patient.
+It was a pleasure to work with Mr. Smalls. Please contact me with any questions
+or concerns regarding this patient.
 
 Sincerely,
 
