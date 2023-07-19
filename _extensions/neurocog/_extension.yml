@@ -6,14 +6,26 @@ contributes:
   format:
     typst:
       format-resources:
-        - resources/qmd/*.qmd
-        - resources/images/*.png
-        - resources/bib/*.bib
-      template:
-        - template.typ
+        - _behav_obs.qmd
+        - _nse.qmd
+        - _recs.qmd
+        - _sirf.qmd
+        - _academics_text.qmd
+        - _academics.qmd
+        - _adhd_text.qmd
+        - _adhd.qmd
+        - _emotion_text.qmd
+        - _emotion.qmd
+        - _executive_text.qmd
+        - _executive.qmd
+        - _iq_text.qmd
+        - _iq.qmd
+        - _memory_text.qmd
+        - _memory.qmd
+        - _spatial_text.qmd
+        - _spatial.qmd
+        - _verbal_text.qmd
+        - _verbal.qmd
       template-partials:
         - typst-template.typ
         - typst-show.typ
-      filters:
-        - neurocog.lua
-      cite-method: biblatex
