@@ -147,13 +147,12 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_memory_text.qmd",
+    file = "_memory_text_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
 ```
 
-{{< include _memory_text.qmd >}}
 
 ```{r}
 #| label: qtbl-memory

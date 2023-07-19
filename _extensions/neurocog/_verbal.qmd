@@ -127,13 +127,11 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_verbal_text.qmd",
+    file = "_verbal_text_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
 ```
-
-{{< include _verbal_text.qmd >}}
 
 ```{r}
 #| label: qtbl-verbal

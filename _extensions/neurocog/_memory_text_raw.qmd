@@ -1,100 +1,16 @@
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
- Short-term word list recall was High Average. 
-Delayed recall of word list was High Average. 
-The percentage of story detail retained over time, scaled to how much was initially learned fell in the High Average range. 
-Delayed recall of the story details over time was Average. 
-Spontaneous, long-term delayed recall (20-25 min) recall and reproduction of a complex abstract figure fell within the Average range. 
-Performance on a more complex one-trial verbal learning and recall task (story learning) was Average. 
-Word list learning/encoding was Average. 
-Percentage of visual detail retained over time, scaled to how much was initially learned fell in the Average range. 
-Recognition of the target visual material among nontarget distractors after a delay period was Average. 
-Learning and recognition of visual material (abstract shapes) was Average.
+---
+title-meta: memory-raw
+execute:
+  cache: true
+---
+
+```{r}
+#| include: false
+
+# <!-- <<PROMPT>> -->
+
+# Summarize and interpret these neuropsychological test scores as if you are an experienced clinical neuropsychologist. For scores that are below average, give a brief example of how this could impact the patient's daily life and functioning. Organize your summary and interpretation from scores that are above average to below average to delineate relative strengths and weaknesses.
+
+# <!-- <<START>> -->
+
+```

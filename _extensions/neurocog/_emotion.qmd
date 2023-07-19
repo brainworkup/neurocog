@@ -129,7 +129,6 @@ data_text |>
   )
 ```
 
-{{< include _emotion_text_raw.qmd >}}
 
 ```{r}
 #| label: qtbl-emotion
@@ -139,7 +138,7 @@ xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering for tables
 # data <- dplyr::arrange(data, test_name)
-#TODO:
+# TODO:
 # source note
 source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.")
 

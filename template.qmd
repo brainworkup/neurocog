@@ -33,7 +33,7 @@ execute:
 
 ```{r}
 # Setting the environment variable
-Sys.setenv(PATIENT_FIRST_NAME = "Ashish")
+Sys.setenv(PATIENT_FIRST_NAME = "Biggie")
 
 # Getting the value of the environment variable
 patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
@@ -75,7 +75,7 @@ patient_first_name <- Sys.getenv("PATIENT_FIRST_NAME")
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-patient <- "Biggie" # dont need
+# patient <- "Biggie" # dont need
 data_path <- here::here("csv")
 files <- dir(data_path, pattern = "*.csv")
 neuropsych <-

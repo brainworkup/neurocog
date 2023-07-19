@@ -117,7 +117,7 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_iq_text.qmd",
+    file = "_iq_text_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -125,7 +125,6 @@ data_text |>
 # subscale <- split(data_text, data_text$scale)
 ```
 
-{{< include _iq_text.qmd >}}
 
 ```{r}
 #| label: qtbl-iq

@@ -97,13 +97,12 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_spatial_text.qmd",
+    file = "_spatial_text_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
 ```
 
-{{< include _spatial_text.qmd >}}
 
 ```{r}
 #| label: qtbl-spatial
