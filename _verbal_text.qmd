@@ -4,4 +4,4 @@ execute:
   cache: true
 ---
 
-<!-- ## Language Processing -->
+Gorety demonstrated Above Average letter/phonemic word fluency and High Average categorical/semantic word fluency. Their word-finding ability and retrieval fluency were Average, with no notable dysfluency in casual expression. Auditory comprehension and rapid reading and color naming tasks were also performed at an Average level.

@@ -14,45 +14,9 @@ execute:
 # <!-- <<START>> -->
 
 ```
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
- Letter/phonemic word fluency was Above Average. 
-Categorical/semantic word fluency fell within the High Average range. 
-Screening of word-finding ability and retrieval fluency on a confrontation naming task was Average, with no obvious dysfluency in conversational/informal expression. 
-Rapid word reading was Average. 
-Auditory comprehension (i.e., the ability to receive, process, and execute oral instructions of increasing syntactic complexity) was Average. 
-Rapid color naming was Average.
+
+Gorety demonstrated Above Average letter/phonemic word fluency and High Average
+categorical/semantic word fluency. Their word-finding ability and retrieval
+fluency were Average, with no notable dysfluency in casual expression. Auditory
+comprehension and rapid reading and color naming tasks were also performed at an
+Average level.

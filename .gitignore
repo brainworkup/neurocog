@@ -70,3 +70,7 @@ jwt_sig.png
 *.csv
 _iq.qmd
 tbl_range.png
+jwtSig.png
+jwtSig.pdf
+.gitignore
+jwt_phd.pdf
