@@ -73,10 +73,9 @@ patient <- Sys.getenv("PATIENT_FIRST_NAME")
 #| label: make-neuropsych
 #| include: false
 library(tidyverse)
-# patient <- "" # dont need
-data_path <- here::here("csv")
+patient <- "Biggie"
+data_path <- here::here(patient, "csv")
 files <- dir(data_path, pattern = "*.csv")
-
 neuropsych <-
   files |>
   purrr::set_names() |>
@@ -94,10 +93,6 @@ neuropsych <-
   dplyr::mutate(pass = forcats::as_factor(pass)) |>
   dplyr::mutate(verbal = forcats::as_factor(verbal)) |>
   dplyr::mutate(timed = forcats::as_factor(timed))
-
-test_df <- readr::read_csv(file.path(data_path, files[1]), show_col_types = FALSE)
-print(colnames(test_df))
-
 ```
 
 ```{r}
@@ -226,13 +221,6 @@ validity <- readr::read_csv(here::here("validity.csv"))
 
 {{< include _iq.qmd >}}
 
-## Academic Skills
-
-```{=html}
-<!-- {{< include _academics_text.qmd >}}
-
-{{< include _academics.qmd >}} -->
-```
 ## Verbal/Language
 
 {{< include _verbal_text.qmd >}}
