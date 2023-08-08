@@ -45,7 +45,6 @@ patient <- Sys.getenv("PATIENT_FIRST_NAME")
 ```
 # TESTS ADMINISTERED
 
-```{=typst}
 - Comprehensive Neuropsychiatric Symptom and History Interview
 - Conners' Adult ADHD Diagnostic Interview for DSM-IV (CAADID), Part I: History
 - Conners' Adult ADHD Rating Scales--Self-Report: Long Version (CAARS--S:L)
@@ -62,7 +61,7 @@ patient <- Sys.getenv("PATIENT_FIRST_NAME")
 - Rey-Osterrieth Complex Figure Test (ROCFT)
 - Trail Making Test
 - Personality Assessment Inventory (PAI)
-```
+
 # NEUROBEHAVIORAL STATUS EXAM
 
 {{< include _nse.qmd >}}
