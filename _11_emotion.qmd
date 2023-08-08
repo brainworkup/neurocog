@@ -1,0 +1,291 @@
+---
+title-meta: emotion
+execute:
+  warning: false
+  echo: false
+  message: false
+format:
+  typst:
+    keep-typ: true
+  pdf:
+    keep-md: true
+    keep-tex: true
+---
+
+<!-- ### Emotional/Behavioral/Personality -->
+
+```{r}
+#| label: data-emotion
+library(readr)
+library(dplyr)
+library(bwu)
+
+# which csv file to use
+pheno <- "emotion"
+
+if (pheno == "adhd" || pheno == "emotion") {
+  csv <- "neurobehav.csv"
+} else {
+  csv <- "neurocog.csv"
+}
+
+# read data
+file_path <- file.path(csv)
+data <- readr::read_csv(file_path)
+```
+
+```{r}
+#| label: filter-emotion
+#| messages: false
+#| echo: false
+#| warning: false
+
+# FILTER DATA
+# filter by broad domain
+domain <- c("Psychiatric Disorders", "Personality Disorders", "Substance Use", "Psychosocial Problems")
+data <- dplyr::filter(data, domain %in% !!domain)
+
+# filter by scale
+filter_file <- c(
+  # PAI
+  "Somatic Complaints",
+  "Conversion",
+  "Somatization",
+  "Health Concerns",
+  "Anxiety",
+  "Cognitive (A)",
+  "Affective (A)",
+  "Physiological (A)",
+  "Anxiety-Related Disorders",
+  "Obsessive-Compulsive",
+  "Phobias",
+  "Traumatic Stress",
+  "Depression",
+  "Cognitive (D)",
+  "Affective (D)",
+  "Physiological (D)",
+  "Mania",
+  "Activity Level",
+  "Grandiosity",
+  "Irritability",
+  "Paranoia",
+  "Hypervigilance",
+  "Persecution",
+  "Resentment",
+  "Schizophrenia",
+  "Psychotic Experiences",
+  "Social Detachment",
+  "Thought Disorder",
+  "Borderline Features",
+  "Affective Instability",
+  "Identity Problems",
+  "Negative Relationships",
+  "Self-Harm",
+  "Antisocial Features",
+  "Antisocial Behaviors",
+  "Egocentricity",
+  "Stimulus-Seeking",
+  "Aggression",
+  "Aggressive Attitude",
+  "Verbal Aggression",
+  "Physical Aggression",
+  "Alcohol Problems",
+  "Drug Problems",
+  "Suicidal Ideation",
+  "Stress",
+  "Nonsupport",
+  "Treatment Rejection",
+  "Dominance",
+  "Warmth",
+  "ALC Estimated Score",
+  "DRG Estimated Score",
+  # BDI-2
+  "BID-2 Total Score",
+  # BAI-2
+  "BAI-2 Total Score"
+)
+data <- dplyr::filter(data, scale %in% filter_file)
+```
+
+```{r}
+#| label: text-emotion
+#| cache: true
+library(glue)
+library(purrr)
+library(dplyr)
+
+data_text <-
+  data |>
+  dplyr::arrange(dplyr::desc(percentile)) |>
+  dplyr::distinct(.keep_all = FALSE)
+
+data_text |>
+  glue::glue_data() |>
+  purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
+  cat(data_text$result,
+    file = "_emotion_raw.qmd",
+    fill = TRUE,
+    append = TRUE
+  )
+```
+
+```{r}
+#| label: qtbl-emotion
+#| eval: false
+#| out-height: 60%
+#| fig-height: 10
+
+# GT table
+xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
+
+# more filtering for tables
+data <- dplyr::arrange(data, test_name)
+
+# source note
+source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.")
+
+# four subtables
+tbl1 <-
+  dplyr::filter(data, domain == "Psychiatric Disorders") |>
+  dplyr::arrange(test_name) |>
+  dplyr::arrange(subdomain)
+tbl1 <- tbl1[, c(11, 2, 4, 5, 6)]
+colnames(tbl1)[1] <- "test_name"
+table_psych <- bwu::tbl_gt(
+  tbl1,
+  table_name = "table_psych",
+  source_note = source_note
+)
+table_psych
+
+tbl2 <-
+  dplyr::filter(data, domain == "Personality Disorders") |>
+  dplyr::arrange(test_name) |>
+  dplyr::arrange(subdomain)
+tbl2 <- tbl2[, c(11, 2, 4, 5, 6)]
+colnames(tbl2)[1] <- "test_name"
+table_personality <- bwu::tbl_gt(
+  tbl2,
+  table_name = "table_personality",
+  source_note = source_note
+)
+table_personality
+
+tbl3 <-
+  dplyr::filter(data, domain == "Substance Use") |>
+  dplyr::arrange(test_name) |>
+  dplyr::arrange(subdomain)
+tbl3 <- tbl3[, c(11, 2, 4, 5, 6)]
+colnames(tbl3)[1] <- "test_name"
+table_sud <- bwu::tbl_gt(
+  tbl3,
+  table_name = "table_sud",
+  source_note = source_note
+)
+table_sud
+
+tbl4 <-
+  dplyr::filter(data, domain == "Psychosocial Problems") |>
+  dplyr::arrange(test_name) |>
+  dplyr::arrange(subdomain)
+tbl4 <- tbl4[, c(11, 2, 4, 5, 6)]
+colnames(tbl4)[1] <- "test_name"
+table_social <- bwu::tbl_gt(
+  tbl4,
+  table_name = "table_social",
+  source_note = source_note
+)
+table_social
+
+# merge
+data_core <- rbind(tbl1, tbl2, tbl3)
+# data_pai <- rbind(tbl1, tbl2, tbl3, tbl4)
+
+# # subset data
+# data_qtbl <- data_pai[, c(11, 2, 4, 5, 6)]
+# # hack
+colnames(data_core)[1] <- "test_name"
+
+# # run fc
+table_emotion <- bwu::tbl_gt(
+  data_core,
+  table_name = "table_emotion",
+  source_note = source_note
+)
+table_emotion
+
+# save
+gt::gtsave(table_emotion, glue::glue("table_emotion", ".png"), expand = 10)
+```
+
+<!-- ```{=typst} -->
+
+<!-- <qtbl-emotion> -->
+
+<!-- #figure([#image("table_emotion.png", width: 70%)], -->
+
+<!--   caption: [ -->
+
+<!--     Behavioral, Personality, and Emotional Functioning -->
+
+<!--   ], -->
+
+<!--   kind: "qtbl", -->
+
+<!--   supplement: [Table], -->
+
+<!-- ) -->
+
+<!-- ``` -->
+
+```{r}
+#| label: fig-emotion
+#| eval: true
+#| fig-cap: "Mood/Self-Report"
+xfun::pkg_attach(c(
+  "gt", "tidyverse", "glue", "webshot2", "ggplot2", "ggthemes",
+  "scales", "bwu"
+))
+
+# data for dotplot
+# data <- dplyr::filter(data, !is.na(percentile))
+
+fig_emotion <- bwu::dotplot(
+  data = data,
+  x = data$z_mean_subdomain,
+  y = data$subdomain,
+  fill = x
+)
+fig_emotion
+ggplot2::ggsave("fig_emotion.png")
+ggplot2::ggsave("fig_emotion.pdf")
+```
+
+```{r}
+#| label: _tbl-md-emotion
+#| eval: true
+#| tbl-cap: "Mood/Self-Report"
+# markdown table; change labe if want to use
+markdown_table_typst <- function(data) {
+  data.frame(
+    data
+  ) |>
+    kableExtra::kbl(
+      format = "markdown",
+      table.envir = "figure",
+      longtable = FALSE,
+      booktabs = TRUE,
+      linesep = "",
+      align = c("lccc"),
+      caption = "Mood/Self-Report",
+      col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
+    )
+}
+
+tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
+
+tbl_md
+
+# list.files()
+
+```

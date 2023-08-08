@@ -16,13 +16,15 @@ params:
   educyrs: 15
   hand: right
   referral: Dr. Dre
-  he_she: he
-  he_she_cap: He
-  his_her: his
-  his_her_cap: His
-  him_her: him
-  him_her_cap: Him
+  he_she: she
+  he_she_cap: She
+  his_her: her
+  his_her_cap: Her
+  him_her: her
+  him_her_cap: Her
   dx1: attention-deficit/hyperactivity disorder (ADHD)
+  dx2: anxiety
+  dx3: depression
 execute:
   warning: false
   echo: false
@@ -58,8 +60,7 @@ patient <- Sys.getenv("PATIENT_FIRST_NAME")
 - Wide Range Achievement Test, 5th ed (WRAT-5): Word Reading
 - Neuropsychological Assessment Battery, Screener (NAB): Attention, Language, Memory, Spatial, and Executive Functions Modules
 - NIH Executive Abilities: Measures and Instruments for Neurobehavioral
-Evaluation and Research (NIH EXAMINER): Unstructured Task, Verbal Fluency, and
-Behavior Rating Scale
+Evaluation and Research (NIH EXAMINER): Unstructured Task, Verbal Fluency, and Behavioral Rating Scale
 - California Verbal Learning Test, 3rd ed (CVLT-3), Brief Form
 - Rey-Osterrieth Complex Figure Test (ROCFT)
 - Trail Making Test
@@ -216,49 +217,55 @@ validity <- readr::read_csv(here::here("validity.csv"))
 
 ## Behavioral Observations
 
-{{< include _behav_obs.qmd >}}
+{{< include _01_behav_obs.qmd >}}
 
 ## Intelligence/General Ability
 
-{{< include _iq_text.qmd >}}
+{{< include _02_iq_text.qmd >}}
 
-{{< include _iq.qmd >}}
+{{< include _02_iq.qmd >}}
+
+<!-- ## Academic Skills -->
+
+<!-- {{< include _03_academics_text.qmd >}}
+
+{{< include _03_academics.qmd >}} -->
 
 ## Verbal/Language
 
-{{< include _verbal_text.qmd >}}
+{{< include _04_verbal_text.qmd >}}
 
-{{< include _verbal.qmd >}}
+{{< include _04_verbal.qmd >}}
 
 ## Visual Perception/Construction
 
-{{< include _spatial_text.qmd >}}
+{{< include _05_spatial_text.qmd >}}
 
-{{< include _spatial.qmd >}}
+{{< include _05_spatial.qmd >}}
 
 ## Attention/Executive
 
-{{< include _executive_text.qmd >}}
+{{< include _06_executive_text.qmd >}}
 
-{{< include _executive.qmd >}}
+{{< include _06_executive.qmd >}}
 
 ## Memory
 
-{{< include _memory_text.qmd >}}
+{{< include _07_memory_text.qmd >}}
 
-{{< include _memory.qmd >}}
+{{< include _07_memory.qmd >}}
 
 ## ADHD/Executive Functioning
 
-{{< include _adhd_text.qmd >}}
+{{< include _10_adhd_text.qmd >}}
 
-{{< include _adhd.qmd >}}
+{{< include _10_adhd.qmd >}}
 
 ## Emotional/Behavioral/Personality
 
-{{< include _emotion_text.qmd >}}
+{{< include _11_emotion_text.qmd >}}
 
-{{< include _emotion.qmd >}}
+{{< include _11_emotion.qmd >}}
 
 {{< pagebreak >}}
 
@@ -336,8 +343,8 @@ Sincerely,
 #| out-width: 20%
 #| fig-align: left
 #| cache: true
-#| eval: false
-knitr::include_graphics("jwt_sig.png")
+#| eval: true
+knitr::include_graphics("./jwt_sig.png")
 ```
 
 **Joey W. Trampush, Ph.D.**\
@@ -363,7 +370,7 @@ Although standardized scores provide the clinician with an important and necessa
 
 ```{r}
 #| label: ranges
-#| eval: false
+#| eval: true
 #| cache: true
 #| double-escape: true
 #| escape: false
