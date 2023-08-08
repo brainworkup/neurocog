@@ -1,8 +1,8 @@
-// #let script-size = 7.97224pt
-// #let footnote-size = 8.50012pt
-// #let small-size = 9.24994pt
-// #let normal-size = 10.00002pt
-// #let large-size = 11.74988pt
+#let script-size = 7.97224pt
+#let footnote-size = 8.50012pt
+#let small-size = 9.24994pt
+#let normal-size = 10.00002pt
+#let large-size = 11.74988pt
 
 #let neurocog(
   title: none,
@@ -72,8 +72,8 @@
   }
 
     // Configure lists and links.
-  set enum(indent: 10pt, body-indent: 5pt)
-  set list(indent: 10pt, body-indent: 5pt)
+  set enum(indent: 5pt, body-indent: 5pt)
+  set list(indent: 5pt, body-indent: 5pt)
   show link: set text(font: "New Computer Modern Mono")
 
 
