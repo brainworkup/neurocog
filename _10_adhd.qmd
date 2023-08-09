@@ -145,9 +145,9 @@ data_sr |>
 
 ```{r}
 #| label: text-adhd-or
-#| cache: true
+#| cache: false
 
-# observer report
+# Observer reports
 data_or <-
   data |>
   dplyr::filter(test == "cefi_or" | test == "caars_or") |>
@@ -168,16 +168,19 @@ data_or |>
 ```{r}
 #| label: qtbl-adhd
 #| fig-align: center
-#| cache: true
+#| cache: false
 
 # GT table
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering
-data <- dplyr::arrange(data, test_name)
+# data <- dplyr::arrange(data, test_name)
 
 # source note
-source_note <- gt::md("*Note:* CAARS Standard scores have a mean of 50 and a standard deviation of 10, and higher scores reflect reduced functioning. CEFI Standard scores have a mean of 100 and a standard deviation of 15, and lower scores reflect reduced functioning.")
+source_note <- gt::md("*Note:* CAARS Standard scores have a mean of 50 and a
+standard deviation of 10, and higher scores reflect reduced functioning.
+
+CEFI Standard scores have a mean of 100 and a standard deviation of 15, and lower scores reflect reduced functioning.")
 
 # source("tbl_gt.R")
 # table_adhd2 <- tbl_gt(
@@ -203,7 +206,7 @@ gt::gtsave(table_adhd, glue("table_adhd", ".pdf"))
 <qtbl-adhd>
 #figure([#image("table_adhd.png", width: 70%)],
   caption: [
-    CAARS and CEFI ADHD rating scales
+    CAARS and CEFI ADHD related rating scales
   ],
   kind: "qtbl",
   supplement: [Table],
@@ -213,7 +216,8 @@ gt::gtsave(table_adhd, glue("table_adhd", ".pdf"))
 ```{r}
 #| label: fig-adhd
 #| eval: true
-#| cache: true
+#| cache: false
+#| fig-height: 7
 #| fig-cap: "Attention and executive functions are multidimensional concepts that contain several related processes. Both concepts require self-regulatory skills and have some common subprocesses; therefore, it is common to treat them together, or even to refer to both processes when talking about one or the other."
 
 # plots

@@ -120,10 +120,9 @@ xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 data <- dplyr::arrange(data, test_name)
 
 # source note
-source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard
-deviation of 10.
-Scaled scores have a mean of 10 and a standard deviation of
-3.")
+source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.
+
+Scaled scores have a mean of 10 and a standard deviation of 3.")
 
 # run fc
 table_spatial <- bwu::tbl_gt(
