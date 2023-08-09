@@ -15,46 +15,59 @@ file <- file.path(paste0(scale, patient, ext))
 
 ## Referral
 
-Ms. XXXX was referred for neuropsychological testing as part of a comprehensive presurgical work-up of her epilepsy syndrome. The results will be used in surgical and treatment planning
+Ms. XXXX was referred for neuropsychological testing as part of a comprehensive
+presurgical work-up of her epilepsy syndrome. The results will be used in
+surgical and treatment planning
 
 ## Background
 
-The following information was obtained during an interview with Ms. XXXX and from review of available medical records. Ms. XXXX has a history of seizures since age 14. While they were initially well controlled, in the last 3 years they have become refractory to multiple seizure medications. She currently experiences one to two seizures per week. Seizures are characterized by behavioral and speech arrest, and last approximately 2 minutes. Postictally, she is mildly confused with language disruption, but she returns to baseline in approximately 10 minutes. She is treated with Depakote, Keppra, and Lamictal.
+The following information was obtained during an interview with Ms. XXXX and
+from review of available medical records. Ms. XXXX has a history of seizures
+since age 14. While they were initially well controlled, in the last 3 years
+they have become refractory to multiple seizure medications. She currently
+experiences one to two seizures per week. Seizures are characterized by
+behavioral and speech arrest, and last approximately 2 minutes. Postictally, she
+is mildly confused with language disruption, but she returns to baseline in
+approximately 10 minutes. She is treated with Depakote, Keppra, and Lamictal.
 
 Cognitive complaints: mild memory and word-finding issues over the last 2 years.
 
-### Past Neuropsychological Test Results 
+### Past Neuropsychological Test Results
 
 Patient denied having prior testing.
 
-### Other Medical History 
+### Other Medical History
 
-- Frequent sinus infections.
-- Other medications: Femcon, folic acid.
-- Appetite/weight: Normal, no changes.
-- Sleep: Normal, no changes.
-- Alcohol/tobacco: No history of abuse; denied current use.
+-   Frequent sinus infections.
+-   Other medications: Femcon, folic acid.
+-   Appetite/weight: Normal, no changes.
+-   Sleep: Normal, no changes.
+-   Alcohol/tobacco: No history of abuse; denied current use.
 
-### Surgical History 
+### Surgical History
 
 Sinus surgery.
 
-### Psychiatric History 
+### Psychiatric History
 
 Patient denied.
 
-### Family History 
+### Family History
 
-Patient denied a family history of neurological conditions. Her brother was diagnosed with ADHD.
+Patient denied a family history of neurological conditions. Her brother was
+diagnosed with ADHD.
 
 ### Cultural/Social Background
 
-Ms. XXXX is a Caucasian female who was born and raised in XXXX. She is single, never married, and has no children.
+Ms. XXXX is a Caucasian female who was born and raised in XXXX. She is single,
+never married, and has no children.
 
-### Educational History 
+### Educational History
 
-Ms. XXXX graduated from college and completed some Master’s-level courses. She did not endorse any difficulties with advancing through school.
+Ms. XXXX graduated from college and completed some Master's-level courses. She
+did not endorse any difficulties with advancing through school.
 
-### Occupational History 
+### Occupational History
 
-Ms. XXXX has worked full time as an administrator in a small company. She has maintained this job for the past 6 years.
+Ms. XXXX has worked full time as an administrator in a small company. She has
+maintained this job for the past 6 years.

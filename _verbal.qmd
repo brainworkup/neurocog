@@ -170,7 +170,6 @@ gt::gtsave(table_verbal, glue("table_verbal", ".pdf"), expand = 10)
   supplement: [Table],
 )
 ```
-
 ```{r}
 #| label: fig-verbal
 #| eval: true
