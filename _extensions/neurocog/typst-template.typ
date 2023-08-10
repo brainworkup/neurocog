@@ -6,16 +6,14 @@
 
 #let neurocog(
   title: none,
-  authors: none,
   date: none,
-  abstract: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
   paper: "a4",
+  margin: (x: 25mm, y: 30mm),
   lang: "en",
   region: "US",
   font: (),
-  fontsize: 11pt,
+  fontsize: 12pt,
   sectionnumbering: none,
   toc: false,
   doc,
@@ -23,8 +21,8 @@
   set page(
     paper: paper,
     margin: margin,
-    // margin: (left: 23mm, right: 25mm, top: 27mm, bottom: 27mm),
-    numbering: ("1/1"),
+    numbering: "1/1",
+    columns: cols,
     header: locate(
         loc => if [#loc.page()] == [1] {
             []
@@ -32,7 +30,7 @@
             [
               #set text(9pt)
               #smallcaps[
-               *CONFIDENTIAL*\
+               *CONFIDENTIAL* \ 
                Patient Name
              ]
            ]
@@ -40,12 +38,11 @@
     )
   )
   set par(justify: true)
-  // set text(lang: lang,
-  //          region: region,
-  //          font: font,
-  //          size: fontsize)
+  set text(lang: lang,
+           region: region,
+           font: font,
+           size: fontsize)
   set heading(numbering: sectionnumbering)
-
 
   // Save heading and body font families in variables.
   let body-font = "Ale­greya"
@@ -57,9 +54,9 @@
 
   // Set paragraph spacing.
   show par: set block(above: 1.2em, below: 1.2em)
-
+  
+  // Set heading font.
   show heading: set text(font: sans-font)
-
 
   // Set run-in subheadings, starting at level 4.
   show heading: it => {
@@ -71,18 +68,17 @@
     }
   }
 
-    // Configure lists and links.
+  // Configure lists and links.
   set enum(indent: 5pt, body-indent: 5pt)
   set list(indent: 5pt, body-indent: 5pt)
   show link: set text(font: "New Computer Modern Mono")
-
 
   // Logo
   block(
     figure(
       image("logo.png"),
     )
-)
+  )
 
   // Title row.
   align(center)[
@@ -90,38 +86,10 @@
     #v(2.2em, weak: true)
   ]
 
-  // if title != none {
-  //   align(center)[#block(inset: 2em)[
-  //     #text(weight: "bold", size: 1.5em)[#title]
-  //   ]]
-  // }
-
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
-          ]
-      )
-    )
-  }
-
   if date != none {
     align(center)[#block(inset: 1em)[
       #date
     ]]
-  }
-
-  if abstract != none {
-    block(inset: 2em)[
-    #text(weight: "semibold")[Abstract] #h(1em) #abstract
-    ]
   }
 
   if toc {
