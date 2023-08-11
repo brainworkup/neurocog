@@ -36,9 +36,6 @@ data <- readr::read_csv(file_path)
 
 ```{r}
 #| label: filter-emotion
-#| messages: false
-#| echo: false
-#| warning: false
 
 # FILTER DATA
 # filter by broad domain
@@ -123,7 +120,7 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_emotion_raw.qmd",
+    file = "_11_emotion_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -210,33 +207,26 @@ colnames(data_core)[1] <- "test_name"
 table_emotion <- bwu::tbl_gt(
   data_core,
   table_name = "table_emotion",
-  source_note = source_note
+  source_note = source_note,
+  title = NULL
 )
 table_emotion
 
 # save
 gt::gtsave(table_emotion, glue::glue("table_emotion", ".png"), expand = 10)
+gt::gtsave(table_emotion, glue::glue("table_emotion", ".pdf"), expand = 10)
 ```
 
-<!-- ```{=typst} -->
-
-<!-- <qtbl-emotion> -->
-
-<!-- #figure([#image("table_emotion.png", width: 70%)], -->
-
-<!--   caption: [ -->
-
-<!--     Behavioral, Personality, and Emotional Functioning -->
-
-<!--   ], -->
-
-<!--   kind: "qtbl", -->
-
-<!--   supplement: [Table], -->
-
-<!-- ) -->
-
-<!-- ``` -->
+```{=typst}
+<qtbl-emotion>
+#figure([#image("table_emotion.png", width: 70%)],
+  caption: [
+    Mood/Self-Report Rating Scale Scores
+  ],
+  kind: "qtbl",
+  supplement: [Table],
+)
+```
 
 ```{r}
 #| label: fig-emotion
@@ -265,6 +255,7 @@ ggplot2::ggsave("fig_emotion.pdf")
 #| label: _tbl-md-emotion
 #| eval: true
 #| tbl-cap: "Mood/Self-Report"
+
 # markdown table; change labe if want to use
 markdown_table_typst <- function(data) {
   data.frame(
@@ -285,7 +276,10 @@ markdown_table_typst <- function(data) {
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 
 tbl_md
+```
 
-# list.files()
-
+```{r}
+#| label: csv-emotion
+emotion <- data[, c(2, 4, 5, 6)]
+readr::write_csv(emotion, "emotion.csv", col_names = FALSE)
 ```

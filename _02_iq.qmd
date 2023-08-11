@@ -120,7 +120,6 @@ data_text |>
     fill = TRUE,
     append = TRUE
   )
-
 # subscale <- split(data_text, data_text$scale)
 ```
 
@@ -145,9 +144,9 @@ table_iq <- bwu::tbl_gt(
 )
 table_iq
 
+# save
 gt::gtsave(table_iq, glue("table_iq", ".png"), expand = 10)
 gt::gtsave(table_iq, glue("table_iq", ".pdf"), expand = 10)
-
 ```
 
 ```{=typst}
@@ -197,7 +196,8 @@ ggplot2::ggsave("fig_iq.pdf")
 #| label: tbl-md-iq
 #| eval: true
 #| tbl-cap: "General Cognitive Ability"
-# markdown table; change labe if want to use
+
+# markdown table; change label if want to use
 markdown_table_typst <- function(data) {
   data.frame(
     data
@@ -209,12 +209,10 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "iq",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
-
 tbl_md
 ```
 

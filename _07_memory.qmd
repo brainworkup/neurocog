@@ -147,7 +147,7 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_memory_raw.qmd",
+    file = "_07_memory_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -162,9 +162,7 @@ data_text |>
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering for tables
-# data <- dplyr::filter(data, test_name != "CVLT-3 Brief")
-# data <- dplyr::filter(data, scale != "Orientation")
-# data <- dplyr::arrange(data, test_name)
+data <- dplyr::arrange(data, test_name)
 
 # source note
 source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.
@@ -227,7 +225,8 @@ ggplot2::ggsave("fig_memory.pdf")
 ```{r}
 #| label: _tbl-md-memory
 #| eval: false
-#| tbl-cap: "memory"
+#| tbl-cap: "Learning and Memory"
+
 # markdown table; change labe if want to use
 markdown_table_typst <- function(data) {
   data.frame(
@@ -240,11 +239,17 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "memory",
+      caption = "Learning and Memory",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
 
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 tbl_md
+```
+
+```{r}
+#| label: csv-memory
+memory <- data[, c(2, 4, 5, 6)]
+readr::write_csv(memory, "memory.csv", col_names = FALSE)
 ```

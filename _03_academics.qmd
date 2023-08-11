@@ -147,25 +147,22 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_academics_raw.qmd",
+    file = "_03_academics_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
 ```
 
-
 ```{r}
 #| label: qtbl-academics
 #| fig-align: center
-#| cache: true
+#| cache: false
 
 # GT table
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering for tables
-# data <- dplyr::filter(data, test_name != "CVLT-3 Brief")
-# data <- dplyr::filter(data, scale != "Orientation")
-# data <- dplyr::arrange(data, test_name)
+data <- dplyr::arrange(data, test_name)
 
 # source note
 source_note <- gt::md("*Note:* Index scores have a mean of 100 and a standard deviation of 15.")
@@ -190,7 +187,7 @@ gt::gtsave(table_academics, glue("table_academics", ".pdf"), expand = 10)
 <qtbl-academics>
 #figure([#image("table_academics.png", width: 70%)],
   caption: [
-    Academic/reading test scores
+    Academic Achievement Test Scores
   ],
   kind: "qtbl",
   supplement: [Table],
@@ -199,11 +196,8 @@ gt::gtsave(table_academics, glue("table_academics", ".pdf"), expand = 10)
 
 ```{r}
 #| label: fig-academics
-#| eval: false
-#| cache: true
-#| fig-width: 6.5
-#| fig-height: 3.5
-#| fig-cap: "Reading ability can be described as consisting of three interrelated abilities: *decoding* (the ability to recognize and pronounce written words presented without context), *comprehension* (the ability not only to understand the facts presented in the text but also the ability to figure out things in the text that are not directly stated), and *fluency* (the ability to decode and understand simple written information in a rapid and fluent manner)."
+#| eval: true
+#| fig-cap: "_Reading ability_ consists of three interrelated abilities: decoding, comprehension, and fluency. _Writing ability_ can be described in terms of spelling, grammar, expression of ideas, and writing fluency. _Math ability_ can be described in terms of calculation skills, applied problem solving, and math fluency."
 
 # plots
 xfun::pkg_attach(c(
@@ -212,27 +206,26 @@ xfun::pkg_attach(c(
 ))
 
 # data for dotplot
-data <- dplyr::filter(data, !is.na(percentile))
+data_dotplot <- dplyr::filter(data, !is.na(percentile))
 
 # will need to change these for each domain
 fig_academics <- bwu::dotplot(
-  data = data,
-  x = data$z_mean_narrow,
-  y = data$narrow,
+  data = data_dotplot,
+  x = data_dotplot$z_mean_narrow,
+  y = data_dotplot$narrow,
   fill = x
 )
 fig_academics
-
 ggplot2::ggsave("fig_academics.png")
 ggplot2::ggsave("fig_academics.pdf")
-
 ```
 
 ```{r}
 #| label: _tbl-md-academics
 #| eval: false
-#| tbl-cap: "Academics"
-# markdown table; change labe if want to use
+#| tbl-cap: "Academic Skills"
+
+# markdown table; change label if want to use
 markdown_table_typst <- function(data) {
   data.frame(
     data
@@ -244,11 +237,14 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "Academics",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
-
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 tbl_md
+```
+```{r}
+#| label: csv-academics
+academics <- data[, c(2, 4, 5, 6)]
+readr::write_csv(academics, "academics.csv", col_names = FALSE)
 ```

@@ -151,12 +151,11 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_executive_raw.qmd",
+    file = "_06_executive_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
 ```
-
 
 ```{r}
 #| label: qtbl-executive
@@ -205,7 +204,7 @@ data <- dplyr::filter(data, scale %in% c(
   "Unstructured Task",
   "Attention Index"
 ))
-# data <- dplyr::arrange(data, test_name)
+data <- dplyr::arrange(data, test_name)
 
 # source note
 source_note <- gt::md("*Note:* T-scores have a mean of 50 and a standard deviation of 10.
@@ -230,7 +229,7 @@ gt::gtsave(table_executive, glue("table_executive", ".pdf"), expand = 10)
 <qtbl-executive>
 #figure([#image("table_executive.png", width: 70%)],
   caption: [
-    Attention and executive functioning test scores
+    Attention/Executive Functioning Test Scores
   ],
   kind: "qtbl",
   supplement: [Table],
@@ -240,8 +239,6 @@ gt::gtsave(table_executive, glue("table_executive", ".pdf"), expand = 10)
 ```{r}
 #| label: fig-executive
 #| eval: true
-#| cache: true
-#| out-width: 70%
 #| fig-cap: "Attentional and executive functions underlie most, if not all, domains of cognitive performance. These are behaviors and skills that allow individuals to successfully carry-out instrumental and social activities, academic work, engage with others effectively, problem solve, and successfully interact with the environment to get needs met."
 xfun::pkg_attach(c(
   "gt", "tidyverse", "glue", "webshot2", "ggplot2", "ggthemes",
@@ -249,12 +246,12 @@ xfun::pkg_attach(c(
 ))
 
 # data for dotplot
-data <- dplyr::filter(data, !is.na(percentile))
+data_dotplot <- dplyr::filter(data, !is.na(percentile))
 
 fig_executive <- bwu::dotplot(
-  data = data,
-  x = data$z_mean_subdomain,
-  y = data$subdomain,
+  data = data_dotplot,
+  x = data_dotplot$z_mean_subdomain,
+  y = data_dotplot$subdomain,
   fill = x
 )
 fig_executive
@@ -265,10 +262,11 @@ ggplot2::ggsave("fig_executive.pdf")
 ```
 
 ```{r}
-#| label: _tbl-md-executive
+#| label: table-md-executive
 #| eval: false
 #| tbl-cap: "Attentional and Executive Functions"
-# markdown table; change labe if want to use
+
+# markdown table; change label if want to use
 markdown_table_typst <- function(data) {
   data.frame(
     data
@@ -280,11 +278,17 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "Attention/Executive",
+      caption = "Attentional and Executive Functions",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
 
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 tbl_md
+```
+
+```{r}
+#| label: csv-executive
+executive <- data[, c(2, 4, 5, 6)]
+readr::write_csv(executive, "executive.csv", col_names = FALSE)
 ```

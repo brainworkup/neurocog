@@ -159,13 +159,13 @@ xfun::pkg_attach(c(
 ))
 
 # data for dotplot
-data <- dplyr::filter(data, !is.na(percentile))
+data_dotplot <- dplyr::filter(data, !is.na(percentile))
 
 # will need to change these for each domain
 fig_spatial <- bwu::dotplot(
-  data = data,
-  x = data$z_mean_narrow,
-  y = data$narrow,
+  data = data_dotplot,
+  x = data_dotplot$z_mean_narrow,
+  y = data_dotplot$narrow,
   fill = x
 )
 fig_spatial
