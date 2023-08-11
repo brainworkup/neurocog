@@ -129,7 +129,7 @@ data_text |>
 ```{r}
 #| label: qtbl-emotion
 #| eval: false
-#| out-height: 60%
+#| out-height: 100%
 #| fig-height: 10
 
 # GT table
@@ -201,7 +201,7 @@ data_core <- rbind(tbl1, tbl2, tbl3)
 # # subset data
 # data_qtbl <- data_pai[, c(11, 2, 4, 5, 6)]
 # # hack
-colnames(data_core)[1] <- "test_name"
+# colnames(data_core)[1] <- "test_name"
 
 # # run fc
 table_emotion <- bwu::tbl_gt(
@@ -215,18 +215,9 @@ table_emotion
 # save
 gt::gtsave(table_emotion, glue::glue("table_emotion", ".png"), expand = 10)
 gt::gtsave(table_emotion, glue::glue("table_emotion", ".pdf"), expand = 10)
+# Need to plot w knitr if want plot
 ```
 
-```{=typst}
-<qtbl-emotion>
-#figure([#image("table_emotion.png", width: 70%)],
-  caption: [
-    Mood/Self-Report Rating Scale Scores
-  ],
-  kind: "qtbl",
-  supplement: [Table],
-)
-```
 
 ```{r}
 #| label: fig-emotion
@@ -238,12 +229,14 @@ xfun::pkg_attach(c(
 ))
 
 # data for dotplot
-# data <- dplyr::filter(data, !is.na(percentile))
+data_dotplot <-
+  dplyr::filter(data, !is.na(percentile)) |>
+  dplyr::filter(domain %in% c("Psychiatric Disorders", "Personality Disorders", "Substance Use"))
 
 fig_emotion <- bwu::dotplot(
-  data = data,
-  x = data$z_mean_subdomain,
-  y = data$subdomain,
+  data = data_dotplot,
+  x = data_dotplot$z_mean_subdomain,
+  y = data_dotplot$subdomain,
   fill = x
 )
 fig_emotion
@@ -253,7 +246,7 @@ ggplot2::ggsave("fig_emotion.pdf")
 
 ```{r}
 #| label: _tbl-md-emotion
-#| eval: true
+#| eval: false
 #| tbl-cap: "Mood/Self-Report"
 
 # markdown table; change labe if want to use
@@ -272,9 +265,7 @@ markdown_table_typst <- function(data) {
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
-
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
-
 tbl_md
 ```
 

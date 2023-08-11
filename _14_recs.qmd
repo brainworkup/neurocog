@@ -26,5 +26,5 @@ title-meta: Recommendations
   arise that need to be addressed.
 
 - Follow-up assessment in 12-18 months is recommended to gauge
-  (ref:first-name)'s progress and to assess the impact of the above
+  `r params$first_name`'s progress and to assess the impact of the above
   interventions, unless further concerns arise that need to be addressed sooner.

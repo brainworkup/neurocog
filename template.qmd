@@ -7,6 +7,8 @@ params:
   patient: Biggie
   first_name: Biggie
   last_name: Smalls
+  observer: Mrs. Wallace
+  observer_relation: mother
   dob: 1991-01-01
   doe1: 2023-01-01
   doe2: 2023-01-01
@@ -280,7 +282,7 @@ readr::write_csv(validity, here::here("validity.csv"))
 
 ```{r}
 #| label: fig-domain-plot
-#| eval: false
+#| eval: true
 #| column: page
 #| fig-cap-location: margin
 #| fig-cap: "*Note:* *z*-scores have a mean of 0 and a standard deviation of 1."
@@ -340,8 +342,7 @@ ggplot2::ggsave("fig_g.pdf")
 
 {{< include _recs.qmd >}}
 
-It was a pleasure to work with Mr. Smalls.
-Please contact me with any questions or concerns regarding this patient.
+It was a pleasure to work with Biggie. Please contact me with any questions or concerns regarding this patient.
 
 Sincerely,
 
