@@ -16,3 +16,20 @@ execute:
 ```
 
 <!-- Glue -->
+ 
+Auditory attentional capacity, or how much information can be processed at once was Exceptionally High. 
+A measure of both attentional capacity and working memory was Above Average. 
+Retrieval fluency, ideational fluency, and generativity was Above Average. 
+Auditory attentional capacity was High Average (9 digits forward). 
+Working memory for orally presented information was High Average (8 digits backward). 
+Efficiency of psychomotor speed, visual scanning ability, and visual-motor coordination was High Average. 
+A marker of reduced focus, or selective attention, distractibility, or reduced concentration, and diminished sustained attention was Average. 
+Scanning, visuomotor tracking, divided attention, and cognitive flexibility was Average. 
+Self-monitoring and perseverative tendencies was Average. 
+Basic psychomotor processing speed was Average. Psychomotor speed was Average. 
+An overall measure of efficiency in performing a selective attention letter cancellation task was Average. 
+Planning and foresight, inhibition, and psychomotor speed examined through a series of maze-tracing tasks fell in the Low Average range. 
+Ashish's performance on a complex measure of divided attention, information processing speed, and inhibition was Low Average. 
+Inhibition/cognitive control was Low Average. 
+Set-shifting/cognitive flexibility was Low Average. 
+Orientation to person, place, time, and situation was intact.

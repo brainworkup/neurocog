@@ -91,7 +91,7 @@ Evaluation and Research (NIH EXAMINER):
 #| include: false
 library(tidyverse)
 patient <- "Biggie"
-data_path <- here::here(patient, "csv")
+data_path <- here::here("csv")
 files <- dir(data_path, pattern = "*.csv")
 neuropsych <-
   files |>
@@ -220,12 +220,6 @@ readr::write_csv(neuropsych, here::here("neuropsych.csv"))
 readr::write_csv(neurocog, here::here("neurocog.csv"))
 readr::write_csv(neurobehav, here::here("neurobehav.csv"))
 readr::write_csv(validity, here::here("validity.csv"))
-
-## read
-neuropsych <- readr::read_csv(here::here("neuropsych.csv"))
-neurocog <- readr::read_csv(here::here("neurocog.csv"))
-neurobehav <- readr::read_csv(here::here("neurobehav.csv"))
-validity <- readr::read_csv(here::here("validity.csv"))
 ```
 
 ## Behavioral Observations
@@ -252,7 +246,7 @@ validity <- readr::read_csv(here::here("validity.csv"))
 
 ## Visual Perception/Construction
 
-{{< include _05_spatial_text.qmd >}}
+<!-- {{< include _05_spatial_text.qmd >}} -->
 
 {{< include _05_spatial.qmd >}}
 

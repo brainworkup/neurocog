@@ -1,10 +1,14 @@
 ---
 title-meta: Neurobehavioral Status Exam
+format:
+  neurocog-typst:
+    keep-typ: true
 ---
 
 ```{r}
 #| label: import-nse-txt
 #| eval: false
+#| include: false
 # construct file path
 patient <- "Biggie"
 scale <- "NeuropsychEval-NSE-"
@@ -15,26 +19,33 @@ file <- file.path(paste0(scale, patient, ext))
 
 ## Referral
 
-`r params$first_name` was referred for neuropsychological testing as part of a comprehensive
+Biggie was referred for neuropsychological testing as part of a comprehensive
 presurgical work-up of her epilepsy syndrome. The results will be used in
 surgical and treatment planning
 
 ## Background
 
-The following information was obtained during an interview with `r params$first_name` and
-from review of available medical records. `r params$first_name` has a history of seizures
-since age 14. While they were initially well controlled, in the last 3 years
-they have become refractory to multiple seizure medications. She currently
-experiences one to two seizures per week. Seizures are characterized by
-behavioral and speech arrest, and last approximately 2 minutes. Postictally, she
-is mildly confused with language disruption, but she returns to baseline in
-approximately 10 minutes. She is treated with Depakote, Keppra, and Lamictal.
+The following information was obtained during an interview with Biggie and from
+review of available medical records. Biggie "Saw a post online of someone
+recently diagnosed with ADHD, and experiences very similar to mine, which
+brought this possibility to my attention." She has been experiencing symptoms of
+procrastnation, distractibility, and difficulty with organization and time.
+Biggie has been experiencing these symptoms since childhood, but they have been
+more problematic in the past few years. She has been able to compensate for her
+difficulties by working harder and longer than her peers.
 
-Cognitive complaints: mild memory and word-finding issues over the last 2 years.
+Cognitive complaints: sustained attention, working memory, and word-finding issues over the last 2 years.
+
+## History
 
 ### Past Neuropsychological Test Results
 
 Patient denied having prior testing.
+
+### Developmental History
+
+- No birth complications.
+- Developmental milestones: Normal.
 
 ### Other Medical History
 
@@ -59,15 +70,15 @@ diagnosed with ADHD.
 
 ### Cultural/Social Background
 
-`r params$first_name` is a Caucasian female who was born and raised in XXXX. She is single,
+Biggie is a Caucasian female who was born and raised in XXXX. She is single,
 never married, and has no children.
 
 ### Educational History
 
-`r params$first_name` graduated from college and completed some Master's-level courses. She
+Biggie graduated from college and completed some Master's-level courses. She
 did not endorse any difficulties with advancing through school.
 
 ### Occupational History
 
-`r params$first_name` has worked full time as an administrator in a small company. She has
+Biggie has worked full time as an administrator in a small company. She has
 maintained this job for the past 6 years.

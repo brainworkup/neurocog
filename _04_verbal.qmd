@@ -127,7 +127,7 @@ data_text |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_text$result,
-    file = "_verbal_raw.qmd",
+    file = "_04_verbal_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -140,8 +140,6 @@ data_text |>
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering for tables
-# data <- dplyr::filter(data, test_name != "CVLT-3 Brief")
-# data <- dplyr::filter(data, scale != "Orientation")
 data <- dplyr::arrange(data, test_name)
 
 # source note
@@ -160,7 +158,6 @@ table_verbal
 
 gt::gtsave(table_verbal, glue("table_verbal", ".png"), expand = 10)
 gt::gtsave(table_verbal, glue("table_verbal", ".pdf"), expand = 10)
-
 ```
 
 ```{=typst}
@@ -186,7 +183,6 @@ xfun::pkg_attach(c(
 
 # data for dotplot
 data <- dplyr::filter(data, !is.na(percentile))
-# exclude <- c("CVLT-3 Total Intrusions", "CVLT-3 Total Repetitions", "CVLT-3 Forced-Choice Recognition Hits")
 
 # will need to change these for each domain
 fig_verbal <- bwu::dotplot(
@@ -199,11 +195,10 @@ fig_verbal
 
 ggplot2::ggsave("fig_verbal.png")
 ggplot2::ggsave("fig_verbal.pdf")
-
 ```
 
 ```{r}
-#| label: _tbl-md-verbal
+#| label: table-md-verbal
 #| eval: false
 #| tbl-cap: "Verbal/Language"
 # markdown table; change label if want to use
@@ -218,11 +213,15 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "Verbal/Language",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
-
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 tbl_md
+```
+
+```{r}
+#| label: csv-verbal
+verbal <- data[, c(2, 4, 5, 6)]
+readr::write_csv(verbal, "verbal.csv", col_names = FALSE)
 ```

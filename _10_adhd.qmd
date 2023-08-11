@@ -16,8 +16,6 @@ format:
 
 ```{r}
 #| label: data-adhd
-#| message: false
-#| echo: false
 library(readr)
 library(dplyr)
 library(bwu)
@@ -38,9 +36,6 @@ data <- readr::read_csv(file_path)
 
 ```{r}
 #| label: filter-adhd
-#| messages: false
-#| echo: false
-#| warning: false
 
 # FILTER DATA
 # filter by broad domain
@@ -137,7 +132,7 @@ data_sr |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_sr$result,
-    file = "_adhd_raw.qmd",
+    file = "_10_adhd_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -158,7 +153,7 @@ data_or |>
   glue::glue_data() |>
   purrr::modify(purrr::as_mapper(~ paste0(.x))) |>
   cat(data_or$result,
-    file = "_adhd_raw.qmd",
+    file = "_10_adhd_raw.qmd",
     fill = TRUE,
     append = TRUE
   )
@@ -174,21 +169,12 @@ data_or |>
 xfun::pkg_attach2(c("gt", "dplyr", "glue", "webshot2", "gtExtras", "bwu"))
 
 # more filtering
-# data <- dplyr::arrange(data, test_name)
+data <- dplyr::arrange(data, test_name)
 
 # source note
-source_note <- gt::md("*Note:* CAARS Standard scores have a mean of 50 and a
-standard deviation of 10, and higher scores reflect reduced functioning.
+source_note <- gt::md("*Note:* CAARS Standard scores have a mean of 50 and a standard deviation of 10, and higher scores reflect reduced functioning.
 
 CEFI Standard scores have a mean of 100 and a standard deviation of 15, and lower scores reflect reduced functioning.")
-
-# source("tbl_gt.R")
-# table_adhd2 <- tbl_gt(
-#   data,
-#   table_name = "table_adhd2",
-#   source_note = source_note
-# )
-# table_adhd2
 
 # run fc
 table_adhd <- bwu::tbl_gt(
@@ -206,7 +192,7 @@ gt::gtsave(table_adhd, glue("table_adhd", ".pdf"))
 <qtbl-adhd>
 #figure([#image("table_adhd.png", width: 70%)],
   caption: [
-    CAARS and CEFI ADHD related rating scales
+    ADHD related rating scales
   ],
   kind: "qtbl",
   supplement: [Table],
@@ -267,9 +253,9 @@ pathwork +
 ```
 
 ```{r}
-#| label: _tbl-md-adhd
-#| eval: false
-#| tbl-cap: "ADHD"
+#| label: table-md-adhd
+#| eval: true
+#| tbl-cap: "ADHD and Executive Functioning"
 # markdown table; change label if want to use
 markdown_table_typst <- function(data) {
   data.frame(
@@ -282,11 +268,16 @@ markdown_table_typst <- function(data) {
       booktabs = TRUE,
       linesep = "",
       align = c("lccc"),
-      caption = "ADHD and Executive Functioning",
       col.names = c("**Scale**", "**Score**", "**‰ Rank**", "**Range**")
     )
 }
 
 tbl_md <- markdown_table_typst(data[, c(2, 4, 5, 6)])
 tbl_md
+```
+
+```{r}
+#| label: csv-adhd
+adhd <- data[, c(2, 4, 5, 6)]
+readr::write_csv(adhd, "adhd.csv", col_names = FALSE)
 ```
